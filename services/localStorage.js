@@ -1,6 +1,6 @@
 'use strict'
 
-export default class Storage {
+class Storage {
   constructor() {
     this.storage = false
   }
@@ -27,3 +27,5 @@ export default class Storage {
     window.localStorage.clear()
   }
 }
+
+export default new Storage()
