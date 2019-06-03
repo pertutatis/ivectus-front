@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="sendLogin">
+  <form v-show="!user" @submit.prevent="sendLogin">
     <h1>Acceder a Ivectus</h1>
     <h2>Necesitamos tus datos para crear tus futuras recetas</h2>
 
@@ -15,12 +15,11 @@
 </template>
 
 <script>
-import storage from '../services/localStorage'
-
 export default {
   components: {
     textInput: () => import('~/components/ui/input-text.vue')
   },
+
   data() {
     return {
       name: '',
@@ -32,19 +31,24 @@ export default {
     }
   },
 
+  computed: {
+    user() {
+      return this.$store.state.user.user
+    }
+  },
+
   methods: {
     sendLogin() {
-      storage.setItem(
-        'user',
-        JSON.stringify({
-          name: this.name,
-          surname: this.surname,
-          address: this.address,
-          city: this.city,
-          collegeNumber: this.collegeNumber,
-          collegeProvince: this.collegeProvince
-        })
-      )
+      this.$store.dispatch('user/loginUser', {
+        name: this.name,
+        surname: this.surname,
+        address: this.address,
+        city: this.city,
+        collegeNumber: this.collegeNumber,
+        collegeProvince: this.collegeProvince
+      })
+
+      this.$router.push('dashboard')
     }
   }
 }

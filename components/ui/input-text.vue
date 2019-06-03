@@ -2,7 +2,7 @@
   <label>
     <span><slot></slot></span>
     <input
-      :value="model"
+      v-model="model"
       :required="required"
       type="text"
       @change="emitChange"

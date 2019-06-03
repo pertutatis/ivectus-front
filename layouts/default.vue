@@ -1,13 +1,22 @@
 <template>
   <div>
+    <main-header />
     <nuxt />
   </div>
 </template>
 
+<script>
+export default {
+  components: {
+    'main-header': () => import('~/components/header.vue')
+  }
+}
+</script>
+
 <style lang="postcss">
 :root {
-  --main-color: #70e270;
-  --background-color: #f4f7fa;
+  --main-color: #7ced9e;
+  --background-color: #effdf8;
 }
 
 html {

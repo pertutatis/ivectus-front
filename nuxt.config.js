@@ -3,6 +3,10 @@ import pkg from './package'
 export default {
   mode: 'spa',
 
+  router: {
+    middleware: 'login'
+  },
+
   /*
    ** Headers of the page
    */
@@ -26,7 +30,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#7ced9e' },
 
   /*
    ** Global CSS

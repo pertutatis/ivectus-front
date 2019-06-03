@@ -20,6 +20,7 @@ export default {
   align-items: center;
   width: 100%;
   height: 100vh;
+  padding-top: 60px;
 }
 
 .login--container {
@@ -30,7 +31,7 @@ export default {
   margin: 30px;
   color: #324c5b;
   background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(48, 82, 120, 0.16);
+  box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.02);
   border-radius: 5px;
 }
 </style>
