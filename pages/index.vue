@@ -27,9 +27,8 @@ export default {
   display: flex;
   flex-wrap: wrap;
   max-width: 550px;
-  padding: 20px;
+  padding: 35px;
   margin: 30px;
-  color: #324c5b;
   background-color: #fff;
   box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.02);
   border-radius: 5px;

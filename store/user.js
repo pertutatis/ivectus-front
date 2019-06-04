@@ -1,4 +1,4 @@
-import UserRegistration from '../services/user-registration'
+import UserRegistration from '~/services/user-registration'
 
 export const state = () => ({
   user: false

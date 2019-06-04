@@ -1,7 +1,9 @@
 <template>
   <form v-show="!user" @submit.prevent="sendLogin">
     <h1>Acceder a Ivectus</h1>
-    <h2>Necesitamos tus datos para crear tus futuras recetas</h2>
+    <p class="login--text">
+      Necesitamos tus datos para crear tus futuras recetas.
+    </p>
 
     <text-input v-model="name">Nombre</text-input>
     <text-input v-model="surname">Apellido</text-input>
@@ -57,27 +59,28 @@ export default {
 <style lang="postcss">
 h1 {
   flex: 0 0 100%;
-  margin-bottom: 5px;
-  font-size: 2.2rem;
-  font-weight: 400;
+  margin-bottom: 15px;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--title-color);
   text-align: center;
 }
 
-h2 {
+.login--text {
   flex: 0 0 100%;
   padding: 0 80px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: 300;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 input[type='submit'] {
   width: auto;
   border: none;
-  padding: 8px 15px;
+  padding: 15px 50px;
   margin: 0 auto;
+  font-weight: var(--medium);
+  color: var(--title-color);
   background-color: var(--main-color);
-  line-height: 1.6;
+  border-radius: 4px;
 }
 </style>

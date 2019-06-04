@@ -3,8 +3,8 @@
 const USER_ID = 'user'
 
 class UserRegistration {
-  getUser(itemID) {
-    const user = window.localStorage.getItem(itemID)
+  getUser() {
+    const user = window.localStorage.getItem(USER_ID)
 
     return JSON.parse(user)
   }

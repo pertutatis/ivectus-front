@@ -33,18 +33,17 @@ export default {
   width: 100%;
   height: 60px;
   padding: 0 34px;
-  background-color: #fff;
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04);
+  background-color: var(--light-color);
+  box-shadow: var(--small-shadow);
 }
 
 .header--brand {
-  font-weight: 700;
-  color: #565759;
+  font-weight: var(--extra-bold);
   font-size: 24px;
+  color: var(--title-color);
 }
 
 .header--state {
-  font-size: 16px;
-  color: #565759;
+  font-size: 14px;
 }
 </style>

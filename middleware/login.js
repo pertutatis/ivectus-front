@@ -1,4 +1,17 @@
-export default function(context) {
-  // eslint-disable-next-line no-console
-  console.log('hola')
+import UserRegistration from '~/services/user-registration'
+
+export default function({ store, route, redirect }) {
+  const RegisteredUser = UserRegistration.getUser()
+
+  if (RegisteredUser) {
+    store.commit('user/saveUser', RegisteredUser)
+  }
+
+  if (RegisteredUser && route.name === 'index') {
+    redirect('/dashboard')
+  }
+
+  if (!RegisteredUser && route.name !== 'index') {
+    redirect('/')
+  }
 }
